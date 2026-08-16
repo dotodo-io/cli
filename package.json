@@ -1,0 +1,44 @@
+{
+  "name": "dotodo",
+  "version": "0.5.0",
+  "description": "Install the dotodo agent skill from GitHub and a URL-only MCP server entry. Does not log in or store tokens.",
+  "type": "module",
+  "bin": {
+    "dotodo": "./bin/dotodo.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "start": "node bin/dotodo.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "dotodo",
+    "mcp",
+    "skill",
+    "cli",
+    "cursor",
+    "claude",
+    "codex",
+    "grok"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotodo-io/cli.git"
+  },
+  "homepage": "https://dotodo.io",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}
