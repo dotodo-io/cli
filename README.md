@@ -9,7 +9,7 @@ node bin/dotodo.js install
 # later, from npm: npx dotodo install
 ```
 
-Guide: [https://dotodo.io/setup/mcp](https://dotodo.io/setup/mcp)
+https://dotodo.io
 
 ## What it does
 
