@@ -1,9 +1,6 @@
 /** Default public MCP Streamable HTTP endpoint (no auth secrets). */
 export const DEFAULT_MCP_URL = 'https://mcp.dotodo.io/mcp';
 
-/** Guide for OAuth / client sign-in after install. */
-export const SETUP_MCP_GUIDE = 'https://dotodo.io/setup/mcp';
-
 /** MCP server key written into client configs. */
 export const MCP_SERVER_KEY = 'dotodo';
 

@@ -1,4 +1,3 @@
-import { SETUP_MCP_GUIDE } from './constants.js';
 import { filterDetectedAgents, resolveAgentPaths } from './agents.js';
 import { writeMcpConfig } from './mcp/index.js';
 import { installSkill } from './skill.js';
@@ -81,6 +80,6 @@ export function printInstallReport(
   }
   console.log('');
   console.log('Next: open your AI client and complete MCP sign-in (OAuth).');
-  console.log(`Guide: ${SETUP_MCP_GUIDE}`);
   console.log(`MCP URL: ${result.mcpUrl}`);
+  console.log('https://dotodo.io');
 }

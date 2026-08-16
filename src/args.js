@@ -189,6 +189,6 @@ Environment:
 This CLI only copies the skill and writes a URL-only MCP entry.
 It does not log you in, store tokens, or call the API.
 After install, sign in via your AI client (OAuth).
-Guide: https://dotodo.io/setup/mcp
+https://dotodo.io
 `);
 }
