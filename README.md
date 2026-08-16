@@ -1,20 +1,14 @@
 # dotodo CLI
 
-Install the **dotodo agent skill** (from [dotodo-io/skills](https://github.com/dotodo-io/skills)) and merge a **URL-only MCP server entry** for Cursor, Claude Code, Codex, and Grok.
-
-This CLI **does not log you in**. It does not store tokens, write Authorization headers, or call the API. After install, complete OAuth in your AI client.
+Install the [dotodo](https://dotodo.io) agent skill and add the MCP server URL for Cursor, Claude Code, Codex, and Grok.
 
 ```bash
 npx dotodo install
 ```
 
-https://dotodo.io · [npm](https://www.npmjs.com/package/dotodo)
+The CLI does not log you in or store tokens. After install, sign in with OAuth in your AI client.
 
-## What it does
-
-1. Downloads `skill.zip` from [the latest GitHub Release](https://github.com/dotodo-io/skills/releases/latest/download/skill.zip) (fallback: repo tarball on `main`).
-2. Copies the skill into agent skill directories.
-3. Merges `mcpServers.dotodo.url` = `https://mcp.dotodo.io/mcp` (or `--mcp-url`).
+Skill source: [dotodo-io/skills](https://github.com/dotodo-io/skills).
 
 ## Commands
 
@@ -30,7 +24,6 @@ npx dotodo install
 npx dotodo update
 npx dotodo uninstall
 npx dotodo status
-npx dotodo help
 ```
 
 ## Options
@@ -50,20 +43,8 @@ npx dotodo help
 Environment:
 
 - `DOTODO_MCP_URL` — default MCP URL
-- `DOTODO_SKILL_REF` — release tag (e.g. `skill-a2a2f29`) or git ref (`main`)
+- `DOTODO_SKILL_REF` — release tag or git ref (default: latest zip)
 - `DOTODO_SKILL_DIR` — local skill folder; skip download
-
-## Develop from a checkout
-
-```bash
-git clone https://github.com/dotodo-io/cli.git
-cd cli
-npm install
-npm test
-node bin/dotodo.js install --dry-run --agents cursor
-```
-
-`npm link` also works (`dotodo help` on PATH); unlink with `npm unlink -g dotodo`.
 
 ## License
 
