@@ -1,15 +1,14 @@
 # dotodo CLI
 
-Install the **dotodo agent skill** (from [dotodo-io/skills](https://github.com/dotodo-io/skills)) and merge a **URL-only MCP server entry** for Cursor, Claude Code, Codex, Grok, and other MCP-capable clients.
+Install the **dotodo agent skill** (from [dotodo-io/skills](https://github.com/dotodo-io/skills)) and merge a **URL-only MCP server entry** for Cursor, Claude Code, Codex, and Grok.
 
 This CLI **does not log you in**. It does not store tokens, write Authorization headers, or call the API. After install, complete OAuth in your AI client.
 
 ```bash
-node bin/dotodo.js install
-# later, from npm: npx dotodo install
+npx dotodo install
 ```
 
-https://dotodo.io
+https://dotodo.io · [npm](https://www.npmjs.com/package/dotodo)
 
 ## What it does
 
@@ -25,6 +24,14 @@ https://dotodo.io
 | `update`    | Same as install (overwrite skill; ensure MCP entry)                      |
 | `uninstall` | Remove skill dirs and the `dotodo` MCP entry (`--keep-mcp` to leave MCP) |
 | `status`    | Show which agents have the skill / MCP URL                               |
+
+```bash
+npx dotodo install
+npx dotodo update
+npx dotodo uninstall
+npx dotodo status
+npx dotodo help
+```
 
 ## Options
 
@@ -46,26 +53,17 @@ Environment:
 - `DOTODO_SKILL_REF` — release tag (e.g. `skill-a2a2f29`) or git ref (`main`)
 - `DOTODO_SKILL_DIR` — local skill folder; skip download
 
-## Test locally (before npm)
-
-Do **not** run `npx dotodo` from the registry yet — the package is not published.
+## Develop from a checkout
 
 ```bash
 git clone https://github.com/dotodo-io/cli.git
 cd cli
 npm install
 npm test
-node bin/dotodo.js help
 node bin/dotodo.js install --dry-run --agents cursor
-node bin/dotodo.js install --agents cursor
-node bin/dotodo.js status
 ```
 
 `npm link` also works (`dotodo help` on PATH); unlink with `npm unlink -g dotodo`.
-
-## Publish
-
-Not yet. After you have tested this repo locally, `npm publish --access public`.
 
 ## License
 

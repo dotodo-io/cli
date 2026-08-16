@@ -1,6 +1,6 @@
 {
   "name": "dotodo",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Install the dotodo agent skill from GitHub and a URL-only MCP server entry. Does not log in or store tokens.",
   "type": "module",
   "bin": {
